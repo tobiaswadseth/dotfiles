@@ -31,9 +31,7 @@ wget -O ~/.vimrc https://raw.githubusercontent.com/tobiaswadseth/dotfiles/main/.
 mkdir -P ~/.vim/autoload/lightline/colorscheme
 wget -O ~/.vim/autoload/onedark.vim https://raw.githubusercontent.com/joshdick/onedark.vim/main/autoload/onedark.vim
 wget -O ~/.vim/autoload/lightline/colorscheme https://raw.githubusercontent.com/joshdick/onedark.vim/main/autoload/onedark.vim
-wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-sh install.sh --unattended
-rm -rf install.sh
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" "" --unattended
 wget -O ~/.zshrc https://raw.githubusercontent.com/tobiaswadseth/dotfiles/main/.zshrc
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt --depth=1
 ln -s ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
