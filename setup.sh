@@ -1,4 +1,4 @@
-echo "Figuring out which OS we are on... (this script might not work, I haven't tested it)"
+echo "Figuring out which OS we are on..."
 
 os="$(uname -s)"
 
@@ -10,11 +10,12 @@ if [ "$os" = "Linux" ] ; then
 
     sudo apt-add-repository universe
     sudo apt-get update
-    sudo apt-get install fonts-firacode vim zsh
+    sudo apt-get install fonts-firacode vim zsh -y
     chsh -s $(which zsh)
 
 elif [ "$os" = "Darwin" ] ; then
 
+    echo "This might not work fully"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew install wget zsh
     chsh -s $(which zsh)
@@ -36,3 +37,4 @@ wget -O ~/.zshrc https://raw.githubusercontent.com/tobiaswadseth/dotfiles/main/.
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt --depth=1
 ln -s ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+zsh
