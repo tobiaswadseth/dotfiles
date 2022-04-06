@@ -68,5 +68,6 @@ let g:lightline={
   \ }
 
 let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.git$']
 
 highlight HighlightedYankRegion cterm=reverse gui=reverse
