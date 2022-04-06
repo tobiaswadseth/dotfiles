@@ -27,6 +27,9 @@ else
     return 0
 fi
 
+zsh
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -s "https://get.sdkman.io" | bash
 wget -O ~/.gitignore https://raw.githubusercontent.com/tobiaswadseth/dotfiles/main/.gitignore
 wget -O ~/.vimrc https://raw.githubusercontent.com/tobiaswadseth/dotfiles/main/.vimrc
 mkdir -P ~/.vim/autoload/lightline/colorscheme
