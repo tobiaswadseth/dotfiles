@@ -10,7 +10,7 @@ if [ "$os" = "Linux" ] ; then
 
     sudo apt-add-repository universe
     sudo apt-get update
-    sudo apt-get install fonts-firacode vim zsh -y
+    sudo apt-get install fonts-firacode vim zsh build-essential cmake python3-dev mono-complete golang -y
     chsh -s $(which zsh)
 
 elif [ "$os" = "Darwin" ] ; then
@@ -29,7 +29,9 @@ fi
 
 zsh
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+nvm install --lts
 curl -s "https://get.sdkman.io" | bash
+sdk install java 11.0.14.10.1-amzn
 wget -O ~/.gitignore https://raw.githubusercontent.com/tobiaswadseth/dotfiles/main/.gitignore
 wget -O ~/.vimrc https://raw.githubusercontent.com/tobiaswadseth/dotfiles/main/.vimrc
 mkdir -P ~/.vim/autoload/lightline/colorscheme
