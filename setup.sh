@@ -31,6 +31,7 @@ zsh
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install --lts
 curl -s "https://get.sdkman.io" | bash
+source $HOME/.sdkman/bin/sdkman-init.sh
 sdk install java 11.0.14.10.1-amzn
 pip3 install pywal
 wget -O ~/.gitignore https://raw.githubusercontent.com/tobiaswadseth/dotfiles/main/.gitignore
