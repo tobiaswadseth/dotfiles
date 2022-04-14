@@ -10,7 +10,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin()
 
-Plug 'joshdick/onedark.vim'
+Plug 'tobiaswadseth/wal.vim'
 
 Plug 'itchyny/lightline.vim'
 
@@ -42,7 +42,7 @@ call plug#end()
 
 syntax on
 
-colorscheme onedark
+colorscheme wal
 
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
@@ -59,13 +59,12 @@ nnoremap <C-f> :NERDTreeFind<CR>
 tnoremap <End> <C-\><C-n>
 
 set encoding=utf8
-set termguicolors
 set number
 set laststatus=2
 
 let g:rainbow_active=1
 let g:lightline={
-  \ 'colorscheme': 'onedark',
+  \ 'colorscheme': 'wal',
   \ }
 
 let NERDTreeShowHidden=1
