@@ -13,6 +13,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 alias c="cd ${HOME}/Documents/dev"
+alias cloneme="git clone git@github.com:tobiaswadseth/$1.git"
 
 (cat ~/.cache/wal/sequences &)
 
@@ -22,4 +23,4 @@ export NVM_DIR="$HOME/.nvm"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKAMN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/skdman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
